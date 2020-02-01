@@ -12,18 +12,42 @@ export class BundleDetailsPage extends Component {
 
     this.state = {
       selected: ["0", "1", "4"],
-      products: []
+      category1: [],
+      category2: [],
+      category3: []
     };
   }
 
   componentDidMount() {
     this.setState({
-      products: this.props.products
+      category1: this.props.category1,
+      category2: this.props.category2,
+      category3: this.props.category3
     });
   }
 
   render() {
-    const products = this.state.products.map((p, index) => (
+    const category1 = this.state.category1.map((p, index) => (
+      <ProductDetailsCard
+        title={p.name}
+        selected={this.state.selected[0] === `${index}`}
+        ratings={p.ratings}
+        editorNote={p.editorNote}
+        noOfReviews={p.reviewCount}
+        url={p.url}
+      />
+    ));
+    const category2 = this.state.category2.map((p, index) => (
+      <ProductDetailsCard
+        title={p.name}
+        selected={this.state.selected[0] === `${index}`}
+        ratings={p.ratings}
+        editorNote={p.editorNote}
+        noOfReviews={p.reviewCount}
+        url={p.url}
+      />
+    ));
+    const category3 = this.state.category3.map((p, index) => (
       <ProductDetailsCard
         title={p.name}
         selected={this.state.selected[0] === `${index}`}
@@ -47,10 +71,15 @@ export class BundleDetailsPage extends Component {
           paddingX="50px"
         >
           <ProductDetailsRow title="Step 1 - Pick Your Monitor">
-            {products}
+            {category1}
           </ProductDetailsRow>
 
-          <ProductDetailsRow>{products}</ProductDetailsRow>
+          <ProductDetailsRow title="Step 2 - Pick Your Keyboard">
+            {category2}
+          </ProductDetailsRow>
+          <ProductDetailsRow title="Step 2 - Pick Your Mouse">
+            {category3}
+          </ProductDetailsRow>
         </Pane>
       </Pane>
     );
