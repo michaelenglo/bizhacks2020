@@ -17,6 +17,7 @@ import Headline from "./Headline";
 import ProductDetailsRow from "../components/ProductDetailsRow";
 import BBButton from "../components/BBButton";
 import Divider from "../Divider";
+import PriceList from "../components/PriceList";
 
 export class BundleDetailsPage extends Component {
   constructor(props) {
@@ -146,10 +147,7 @@ export class BundleDetailsPage extends Component {
           paddingY="20px"
           paddingX="50px"
         >
-          <Pane display="flex" paddingLeft="50%" marginTop="10px" width="100%" justifyContent="space-between" flexDirection="row">
-            <Heading>1 x ITEem</Heading>
-            <Heading>$10.00</Heading>
-          </Pane>
+          <PriceList />
         </Pane>
         <Pane
           display="flex"
