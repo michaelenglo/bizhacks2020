@@ -6,7 +6,7 @@ import { BundleDetailsPage } from "./pages/BundleDetailsPage";
 import { HomePage } from "./pages/HomePage";
 
 class App extends React.Component {
-  constuctor(props) {
+  constructor(props) {
     super(props);
 
     this.state = {};
