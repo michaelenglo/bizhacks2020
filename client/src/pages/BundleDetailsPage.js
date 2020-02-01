@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import {
   Pane,
@@ -13,7 +12,6 @@ import {
 import Header from "../components/Header";
 import BundleInfoSection from "../components/BundleInfoSection";
 import ProductDetailsCard from "../components/ProductDetailsCard";
-import Headline from "./Headline";
 import ProductDetailsRow from "../components/ProductDetailsRow";
 import BBButton from "../components/BBButton";
 import Divider from "../Divider";
@@ -24,11 +22,53 @@ export class BundleDetailsPage extends Component {
     super(props);
 
     this.state = {
-      selected: ["0", "1", "4"]
+      selected: ["0", "1", "4"],
+      category1: [],
+      category2: [],
+      category3: []
     };
   }
 
+  componentDidMount() {
+    this.setState({
+      category1: this.props.category1,
+      category2: this.props.category2,
+      category3: this.props.category3
+    });
+  }
+
   render() {
+    const category1 = this.state.category1.map((p, index) => (
+      <ProductDetailsCard
+        title={p.name}
+        selected={this.state.selected[0] === `${index}`}
+        ratings={p.ratings}
+        editorNote={p.editorNote}
+        noOfReviews={p.reviewCount}
+        url={p.url}
+      />
+    ));
+    const category2 = this.state.category2.map((p, index) => (
+      <ProductDetailsCard
+        title={p.name}
+        selected={this.state.selected[0] === `${index}`}
+        ratings={p.ratings}
+        editorNote={p.editorNote}
+        noOfReviews={p.reviewCount}
+        url={p.url}
+      />
+    ));
+    const category3 = this.state.category3.map((p, index) => (
+      <ProductDetailsCard
+        title={p.name}
+        selected={this.state.selected[0] === `${index}`}
+        ratings={p.ratings}
+        editorNote={p.editorNote}
+        noOfReviews={p.reviewCount}
+        url={p.url}
+      />
+    ));
+
     return (
       <Pane width="100%">
         <Header />
@@ -42,101 +82,14 @@ export class BundleDetailsPage extends Component {
           paddingX="50px"
         >
           <ProductDetailsRow title="Step 1 - Pick Your Monitor">
-            <ProductDetailsCard
-              title="100"
-              selected={this.state.selected[0] === "0"}
-              ratings={3}
-              editorNote="Best bang for buck"
-              noOfReviews={100}
-              url="/pics/monitor0.png"
-            />
-            <ProductDetailsCard
-              title="100"
-              ratings={3}
-              editorNote="Good portability"
-              noOfReviews={100}
-              url="/pics/monitor1.png"
-            />
-            <ProductDetailsCard
-              title="100"
-              ratings={3}
-              editorNote="Most endurant"
-              noOfReviews={100}
-              url="/pics/monitor2.png"
-            />
-            <ProductDetailsCard
-              title="100"
-              ratings={3}
-              editorNote="Best Large screen"
-              noOfReviews={100}
-              url="/pics/monitor3.png"
-            />
-            <ProductDetailsCard
-              title="100"
-              ratings={3}
-              editorNote="Best all rounder"
-              noOfReviews={100}
-              url="/pics/monitor4.png"
-            />
-            <ProductDetailsCard
-              title="100"
-              ratings={3}
-              editorNote="Best "
-              noOfReviews={100}
-              url="/pics/monitor5.png"
-            />
-            <ProductDetailsCard
-              title="100"
-              ratings={3}
-              editorNote="Easy to Assemble"
-              noOfReviews={100}
-              url="/pics/monitor6.png"
-            />
+            {category1}
           </ProductDetailsRow>
 
-          <ProductDetailsRow>
-            <ProductDetailsCard
-              title="100"
-              ratings={3}
-              noOfReviews={100}
-              url="/pics/monitor0.png"
-            />
-            <ProductDetailsCard
-              title="100"
-              ratings={3}
-              noOfReviews={100}
-              url="/pics/monitor1.png"
-            />
-            <ProductDetailsCard
-              title="100"
-              ratings={3}
-              noOfReviews={100}
-              url="/pics/monitor2.png"
-            />
-            <ProductDetailsCard
-              title="100"
-              ratings={3}
-              noOfReviews={100}
-              url="/pics/monitor3.png"
-            />
-            <ProductDetailsCard
-              title="100"
-              ratings={3}
-              noOfReviews={100}
-              url="/pics/monitor4.png"
-            />
-            <ProductDetailsCard
-              title="100"
-              ratings={3}
-              noOfReviews={100}
-              url="/pics/monitor5.png"
-            />
-            <ProductDetailsCard
-              title="100"
-              ratings={3}
-              noOfReviews={100}
-              url="/pics/monitor6.png"
-            />
+          <ProductDetailsRow title="Step 2 - Pick Your Keyboard">
+            {category2}
+          </ProductDetailsRow>
+          <ProductDetailsRow title="Step 2 - Pick Your Mouse">
+            {category3}
           </ProductDetailsRow>
         </Pane>
 
