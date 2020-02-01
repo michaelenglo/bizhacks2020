@@ -5,32 +5,32 @@ import { BundlesPage } from "./pages/BundlesPage";
 import { BundleDetailsPage } from "./pages/BundleDetailsPage";
 import { HomePage } from "./pages/HomePage";
 
-function App() {
+class App extends React.Component() {
   constuctor(props) {
     super(props);
 
-    this.state = {
-
-    };
+    this.state = {};
   }
 
-  return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route exact path="/bundles">
-            <BundlesPage />
-          </Route>
-          <Route exact path="/bundles/1234">
-            <BundleDetailsPage />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route exact path="/bundles">
+              <BundlesPage />
+            </Route>
+            <Route exact path="/bundles/1234">
+              <BundleDetailsPage />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
