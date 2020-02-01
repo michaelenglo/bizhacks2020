@@ -4,12 +4,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { BundlesPage } from "./pages/BundlesPage";
 import { BundleDetailsPage } from "./pages/BundleDetailsPage";
 import { HomePage } from "./pages/HomePage";
+import { products } from "./resources";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      products: products
+    };
   }
 
   render() {
@@ -24,7 +27,7 @@ class App extends React.Component {
               <BundlesPage />
             </Route>
             <Route exact path="/bundles/1234">
-              <BundleDetailsPage />
+              <BundleDetailsPage products={this.state.products} />
             </Route>
           </Switch>
         </Router>
