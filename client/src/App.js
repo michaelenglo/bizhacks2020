@@ -16,7 +16,7 @@ function App() {
           <Route exact path="/bundles">
             <BundlesPage />
           </Route>
-          <Route exact path="/bundles/{:id}">
+          <Route exact path="/bundles/1234">
             <BundleDetailsPage />
           </Route>
         </Switch>
