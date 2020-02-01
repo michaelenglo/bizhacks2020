@@ -5,7 +5,7 @@ import { BundlesPage } from "./pages/BundlesPage";
 import { BundleDetailsPage } from "./pages/BundleDetailsPage";
 import { HomePage } from "./pages/HomePage";
 
-class App extends React.Component() {
+class App extends React.Component {
   constuctor(props) {
     super(props);
 
