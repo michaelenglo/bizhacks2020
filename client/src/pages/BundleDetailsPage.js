@@ -1,54 +1,62 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { Pane, Text, TextInput, SearchInput, Card, Heading } from "evergreen-ui";
-import logo from "../bb-logo.png";
+import {
+  Pane,
+  Text,
+  TextInput,
+  SearchInput,
+  Card,
+  Heading
+} from "evergreen-ui";
+import Header from "../components/Header";
+import BundleInfoSection from "../components/BundleInfoSection";
+import ProductDetailsCard from "../components/ProductDetailsCard";
+import Headline from "./Headline";
+import ProductDetailsRow from "../components/ProductDetailsRow";
 
 export class BundleDetailsPage extends Component {
+    
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            selected: ["0", "1", "4"],
+        }
+    }
+
   render() {
     return (
       <Pane width="100%">
+        <Header />
+
+        <BundleInfoSection />
+
         <Pane
-          paddingX="10px"
-          height="10vh"
-          backgroundColor="var(--main-bb-color)"
           display="flex"
-          flexDirection="row"
-          alignItems="center"
+          flexDirection="column"
+          paddingY="20px"
+          paddingX="50px"
         >
-          <img src={logo} width="50px" className="App-logo" alt="logo" />
-          <SearchInput
-            height="40px"
-            placeholder="Type in a keyword..."
-            width="100%"
-            marginLeft="20px"
-            marginRight="30%"
-          />
-        </Pane>
+          <ProductDetailsRow title="Step 1 - Pick Your Monitor">
+            <ProductDetailsCard title="100" selected={this.state.selected[0] === "0"} ratings={3} editorNote="Best bang for buck" noOfReviews={100} url="/pics/monitor0.png" />
+            <ProductDetailsCard title="100" ratings={3} editorNote="Good portability" noOfReviews={100} url="/pics/monitor1.png" />
+            <ProductDetailsCard title="100" ratings={3} editorNote="Most endurant" noOfReviews={100} url="/pics/monitor2.png" />
+            <ProductDetailsCard title="100" ratings={3} editorNote="Best Large screen" noOfReviews={100} url="/pics/monitor3.png" />
+            <ProductDetailsCard title="100" ratings={3} editorNote="Best all rounder" noOfReviews={100} url="/pics/monitor4.png" />
+            <ProductDetailsCard title="100" ratings={3} editorNote="Best " noOfReviews={100} url="/pics/monitor5.png" />
+            <ProductDetailsCard title="100" ratings={3} editorNote="Easy to Assemble" noOfReviews={100} url="/pics/monitor6.png" />
+          </ProductDetailsRow>
 
-        <Pane boxShadow="inset 0px -2px 6px #888888" height="40vh" backgroundColor="white">
-            
-        </Pane>
-
-        <Pane minHeight="40vh" backgroundColor="white">
-
-            <Pane display="flex" flexDirection="column" paddingY="20px" paddingX="50px">
-                <Heading size={700}>Monitors</Heading>
-                <Pane borderTop="default" marginY="10px" height="4px" />
-                <Pane display="flex" flexDirection="row" justifyContent="space-between">
-                    <Pane background="tint1" border="default" width="300px" height="350px">
-                        asjdkl
-                    </Pane>
-                    
-                    <Pane background="tint1" border="default" width="300px" height="350px">
-                        asjdkl
-                    </Pane>
-                    <Pane background="tint1" border="default" width="300px" height="350px">
-                        asjdkl
-                    </Pane>
-                </Pane>
-            </Pane>
-
+          <ProductDetailsRow>
+            <ProductDetailsCard title="100" ratings={3} noOfReviews={100} url="/pics/monitor0.png" />
+            <ProductDetailsCard title="100" ratings={3} noOfReviews={100} url="/pics/monitor1.png" />
+            <ProductDetailsCard title="100" ratings={3} noOfReviews={100} url="/pics/monitor2.png" />
+            <ProductDetailsCard title="100" ratings={3} noOfReviews={100} url="/pics/monitor3.png" />
+            <ProductDetailsCard title="100" ratings={3} noOfReviews={100} url="/pics/monitor4.png" />
+            <ProductDetailsCard title="100" ratings={3} noOfReviews={100} url="/pics/monitor5.png" />
+            <ProductDetailsCard title="100" ratings={3} noOfReviews={100} url="/pics/monitor6.png" />
+          </ProductDetailsRow>
         </Pane>
       </Pane>
     );

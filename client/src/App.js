@@ -6,6 +6,14 @@ import { BundleDetailsPage } from "./pages/BundleDetailsPage";
 import { HomePage } from "./pages/HomePage";
 
 function App() {
+  constuctor(props) {
+    super(props);
+
+    this.state = {
+
+    };
+  }
+
   return (
     <div className="App">
       <Router>
