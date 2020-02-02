@@ -41,7 +41,14 @@ export class BundleDetailsPage extends Component {
     const category1 = this.state.category1.map((p, index) => (
       <ProductDetailsCard
         title={p.name}
-        selected={this.state.selected[0] === `${index}`}
+        selected={this.state.selected[0] === p.id}
+        onClick={() =>
+          this.setState(state => ({
+            selected: state.selected.map((s, i) => {
+              return i === 0 ? p.id : s;
+            })
+          }))
+        }
         ratings={p.ratings}
         editorNote={p.editorNote}
         noOfReviews={p.reviewCount}
@@ -50,8 +57,15 @@ export class BundleDetailsPage extends Component {
     ));
     const category2 = this.state.category2.map((p, index) => (
       <ProductDetailsCard
+        selected={this.state.selected[1] === p.id}
+        onClick={() =>
+          this.setState(state => ({
+            selected: state.selected.map((s, i) => {
+              return i === 1 ? p.id : s;
+            })
+          }))
+        }
         title={p.name}
-        selected={this.state.selected[0] === `${index}`}
         ratings={p.ratings}
         editorNote={p.editorNote}
         noOfReviews={p.reviewCount}
@@ -60,8 +74,15 @@ export class BundleDetailsPage extends Component {
     ));
     const category3 = this.state.category3.map((p, index) => (
       <ProductDetailsCard
+        selected={this.state.selected[2] === p.id}
+        onClick={() =>
+          this.setState(state => ({
+            selected: state.selected.map((s, i) => {
+              return i === 2 ? p.id : s;
+            })
+          }))
+        }
         title={p.name}
-        selected={this.state.selected[0] === `${index}`}
         ratings={p.ratings}
         editorNote={p.editorNote}
         noOfReviews={p.reviewCount}

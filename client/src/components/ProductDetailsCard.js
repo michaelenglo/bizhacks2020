@@ -15,6 +15,7 @@ export class ProductDetailsCard extends PureComponent {
         minWidth="300px"
         maxWidth="300px"
         minHeight="350px"
+        onClick={this.props.onClick}
       >
         <Pane
           minWidth="200px"
