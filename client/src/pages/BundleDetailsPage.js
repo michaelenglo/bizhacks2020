@@ -63,6 +63,7 @@ export class BundleDetailsPage extends Component {
             return i === 0 ? p.id : s;
           });
           this.props.toggleSelected(newSelected);
+          this.gotoRefs[1].scrollIntoView({ behavior: "smooth" });
         }}
         ratings={p.ratings}
         editorNote={p.editorNote}
