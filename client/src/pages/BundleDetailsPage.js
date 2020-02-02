@@ -22,7 +22,7 @@ export class BundleDetailsPage extends Component {
     super(props);
 
     this.state = {
-      selected: ["0", "1", "4"],
+      selected: ["0", "1", "2"],
       category1: [],
       category2: [],
       category3: []
