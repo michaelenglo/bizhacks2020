@@ -24,7 +24,7 @@ export class BundleDetailsPage extends Component {
     this.gotoRefs = [];
 
     this.state = {
-      selected: ["0", "1", "2"],
+      selected: [],
       category1: [],
       category2: [],
       category3: []
@@ -33,6 +33,7 @@ export class BundleDetailsPage extends Component {
 
   componentDidMount() {
     this.setState({
+      selected: this.props.selected,
       category1: this.props.category1,
       category2: this.props.category2,
       category3: this.props.category3
@@ -44,13 +45,12 @@ export class BundleDetailsPage extends Component {
       <ProductDetailsCard
         title={p.name}
         selected={this.state.selected[0] === p.id}
-        onClick={() =>
-          this.setState(state => ({
-            selected: state.selected.map((s, i) => {
-              return i === 0 ? p.id : s;
-            })
-          }))
-        }
+        onClick={() => {
+          const newSelected = this.state.selected.map((s, i) => {
+            return i === 0 ? p.id : s;
+          });
+          this.props.toggleSelected(newSelected);
+        }}
         ratings={p.ratings}
         editorNote={p.editorNote}
         noOfReviews={p.reviewCount}
@@ -153,7 +153,9 @@ export class BundleDetailsPage extends Component {
           <Heading marginTop="50px" size="700">
             Total: $123090
           </Heading>
-          <BBButton />
+          <a href={"/cart"}>
+            <BBButton />
+          </a>
         </Pane>
       </Pane>
     );

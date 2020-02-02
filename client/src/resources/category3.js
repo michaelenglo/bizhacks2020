@@ -1,4 +1,5 @@
 export const product1 = {
+  id: "1",
   name: `Razer Ouroboros`,
   ratings: 4,
   editorNote:
@@ -12,6 +13,7 @@ export const product1 = {
 };
 
 export const product2 = {
+  id: "2",
   name: `Logitech MX Master Bluetooth Laser Mouse - Black`,
   ratings: 5,
   editorNote:
@@ -24,6 +26,7 @@ export const product2 = {
   summary: "Versatile mouse with lots of functionality"
 };
 export const product3 = {
+  id: "3",
   name: `Logitech G903 12000DPI Wireless Optical Gaming Mouse - Black`,
   ratings: 3,
   editorNote:

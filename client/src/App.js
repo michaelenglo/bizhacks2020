@@ -5,6 +5,7 @@ import { BundlesPage } from "./pages/BundlesPage";
 import { BundleDetailsPage } from "./pages/BundleDetailsPage";
 import { HomePage } from "./pages/HomePage";
 import { category1, category2, category3 } from "./resources";
+import { CartDetails } from "./pages/CartDetails";
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class App extends React.Component {
     this.state = {
       category1: category1,
       category2: category2,
-      category3: category3
+      category3: category3,
+      selected: ["0", "1", "2"]
     };
   }
 
@@ -33,6 +35,18 @@ class App extends React.Component {
                 category1={this.state.category1}
                 category2={this.state.category2}
                 category3={this.state.category3}
+                selected={this.state.selected}
+                toggleSelected={e => {
+                  this.setState({ selected: e });
+                }}
+              />
+            </Route>
+            <Route exact path="/cart">
+              <CartDetails
+                category1={this.state.category1}
+                category2={this.state.category2}
+                category3={this.state.category3}
+                selected={this.state.selected}
               />
             </Route>
           </Switch>
