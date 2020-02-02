@@ -97,7 +97,7 @@ export class BundleDetailsPage extends Component {
           <ProductDetailsRow title="Step 2 - Pick Your Keyboard">
             {category2}
           </ProductDetailsRow>
-          <ProductDetailsRow title="Step 2 - Pick Your Mouse">
+          <ProductDetailsRow title="Step 3 - Pick Your Mouse">
             {category3}
           </ProductDetailsRow>
         </Pane>
