@@ -47,14 +47,27 @@ export class HomePage extends Component {
             flexDirection="row"
             justifyContent="space-around"
           >
-            <ProductDetailsCard onClick={() => window.open("http://localhost:3000/bundles/1234")} summary="React Tech Tips" ratings={3} price={123}/>
-            <ProductDetailsCard summary="Christmas Bundle" ratings={3} price={599}/>
-            <ProductDetailsCard summary="Linus Tech Tips" ratings={3} price={259}/>
+            <ProductDetailsCard
+              onClick={() => window.open("http://localhost:3000/bundles/1234")}
+              summary="React Tech Tips"
+              ratings={3}
+              price={123}
+              url="/pics/react.png"
+            />
+            <ProductDetailsCard
+              summary="Christmas Bundle"
+              ratings={3}
+              price={599}
+              url="/pics/TREE.png"
+            />
+            <ProductDetailsCard
+              summary="Linus Tech Tips"
+              ratings={3}
+              price={259}
+              url="/pics/ltt.png"
+            />
           </Pane>
         </Pane>
-        
-
-
       </Pane>
     );
   }
