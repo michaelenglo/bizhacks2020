@@ -7,7 +7,7 @@ export class BundleInfoSection extends PureComponent {
   render() {
     return (
       <Pane
-        // boxShadow="inset 0px -2px 6px #888888"
+        boxShadow="inset 0px -2px 6px #888888"
         height="40vh"
         overflow="hidden"
         paddingX="30px"
@@ -16,7 +16,6 @@ export class BundleInfoSection extends PureComponent {
         alignItems="flex-end"
         background='black url("../pics/logo.svg") no-repeat fixed center'
       >
-        <Pane>{/* <img height="700px" src={logoMyglo} /> */}</Pane>
         <Pane
           width="95%"
           height="250px"

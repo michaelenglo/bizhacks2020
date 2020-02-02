@@ -67,7 +67,7 @@ export const product6 = {
   productID: ""
 };
 
-export const products = [
+export const category3 = [
   product1,
   product2,
   product3,
