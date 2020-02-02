@@ -62,7 +62,7 @@ export const product5 = {
 };
 export const product6 = {
   name: `LG 36" 90Hz 4ms Curved PLS LED Monitor (LC32F391FWNXZA) - White`,
-  ratings: 3,.
+  ratings: 3,
   editorNote:
     "This item is a really good item for people who are looking into a more budget friendly monitors. It's got 28.6 GHz of RMP and dual processing quickdown.",
   reviewCount: 76,
