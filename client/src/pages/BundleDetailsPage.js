@@ -9,6 +9,7 @@ import {
   Heading,
   Button
 } from "evergreen-ui";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import BundleInfoSection from "../components/BundleInfoSection";
 import ProductDetailsCard from "../components/ProductDetailsCard";
@@ -183,9 +184,9 @@ export class BundleDetailsPage extends Component {
               })
               .reduce((a, b) => a + b, 0)}
           </Heading>
-          <a href={"/cart"}>
+          <Link to="/cart">
             <BBButton />
-          </a>
+          </Link>
         </Pane>
       </Pane>
     );
