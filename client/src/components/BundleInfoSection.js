@@ -32,7 +32,7 @@ export class BundleInfoSection extends PureComponent {
             THE Gaming Setup Starter Kit
           </Heading>
           <Heading color="white" marginTop="5px" size={500}>
-            by Marques - Tech Reviewer
+            by Marques Brownlee - a Tech Reviewer
           </Heading>
           <Pane
             color="white"
@@ -46,6 +46,10 @@ export class BundleInfoSection extends PureComponent {
           <Text color="white" marginTop="5px" align="left" size={500}>
             Marques Brownlee is a youtuber that reviews the most up to date tech
             gadgets. React has about 100 M subscribers on his channel.
+          </Text>
+
+          <Text color="white" marginTop="5px" align="left" size={500}>
+            Marques Brownlee has created a hand-picked list of items he thinks one should get to build a rockstar gaming laptop setup.
           </Text>
         </Pane>
       </Pane>

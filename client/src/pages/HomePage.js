@@ -52,18 +52,21 @@ export class HomePage extends Component {
               summary="React Tech Tips"
               ratings={3}
               price={123}
-              url="/pics/react.png"
+              noOfReviews={103134}
+              url="/pics/marques-logo.png"
             />
             <ProductDetailsCard
               summary="Christmas Bundle"
               ratings={3}
               price={599}
+              noOfReviews={1230}
               url="/pics/TREE.png"
             />
             <ProductDetailsCard
               summary="Linus Tech Tips"
               ratings={3}
               price={259}
+              noOfReviews={30123}
               url="/pics/ltt.png"
             />
           </Pane>
