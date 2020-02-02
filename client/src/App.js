@@ -15,7 +15,7 @@ class App extends React.Component {
       category1: category1,
       category2: category2,
       category3: category3,
-      selected: ["0", "1", "2"]
+      selected: ["-1", "-1", "-1"]
     };
   }
 

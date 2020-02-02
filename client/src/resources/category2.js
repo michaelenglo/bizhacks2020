@@ -46,7 +46,7 @@ export const product3 = {
   editorNote:
     "This item is a really good item for people who are looking into a more budget friendly keyboards. It's got 28.6 GHz of RMP and dual processing quickdown.",
   reviewCount: 76,
-  url: "/pics/keyboard3.png",
+  url: "/pics/keyboard1.png",
   description: "",
   price: 249.0,
   productID: "",
