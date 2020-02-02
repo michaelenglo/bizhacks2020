@@ -1,10 +1,21 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Pane } from "evergreen-ui";
+import {
+  Pane,
+  Text,
+  TextInput,
+  SearchInput,
+  Card,
+  Heading,
+  Button
+} from "evergreen-ui";
 import Header from "../components/Header";
 import BundleInfoSection from "../components/BundleInfoSection";
 import ProductDetailsCard from "../components/ProductDetailsCard";
 import ProductDetailsRow from "../components/ProductDetailsRow";
+import BBButton from "../components/BBButton";
+import Divider from "../Divider";
+import PriceList from "../components/PriceList";
 
 export class BundleDetailsPage extends Component {
   constructor(props) {
@@ -89,6 +100,30 @@ export class BundleDetailsPage extends Component {
           <ProductDetailsRow title="Step 2 - Pick Your Mouse">
             {category3}
           </ProductDetailsRow>
+        </Pane>
+
+        <Pane
+          display="flex"
+          flexDirection="column"
+          alignItems="flex-start"
+          paddingY="20px"
+          paddingX="50px"
+        >
+          <PriceList />
+        </Pane>
+        <Pane
+          display="flex"
+          flexDirection="column"
+          alignItems="flex-end"
+          paddingTop="40px"
+          paddingBottom="75px"
+          paddingX="70px"
+        >
+          <Divider />
+          <Heading marginTop="50px" size="700">
+            Total: $123090
+          </Heading>
+          <BBButton />
         </Pane>
       </Pane>
     );
