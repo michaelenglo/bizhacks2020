@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import { Pane, Text, Heading, Strong, Icon } from "evergreen-ui";
 import logoMyglo from "../myglo_dark.svg";
-import logo from "../logo.svg";
+import logo from "../marques-logo.png";
 
 export class BundleInfoSection extends PureComponent {
   render() {
@@ -14,7 +14,7 @@ export class BundleInfoSection extends PureComponent {
         paddingBottom="20px"
         display="flex"
         alignItems="flex-end"
-        background='black url("../pics/logo.svg") no-repeat fixed center'
+        background='black url("../pics/marques.png") no-repeat fixed center'
       >
         <Pane
           width="95%"
@@ -32,7 +32,7 @@ export class BundleInfoSection extends PureComponent {
             THE Gaming Setup Starter Kit
           </Heading>
           <Heading color="white" marginTop="5px" size={500}>
-            by React Tech Tips - Tech Reviewer
+            by Marques - Tech Reviewer
           </Heading>
           <Pane
             color="white"
@@ -40,11 +40,11 @@ export class BundleInfoSection extends PureComponent {
             marginTop="5px"
             alignItems="center"
           >
-            <Strong color="white">VERIFIED</Strong>
-            <Icon color="green" icon="small-tick" size="18px" />
+            <Strong color="lightblue">VERIFIED</Strong>
+            <Icon color="lightblue" icon="small-tick" size="18px" />
           </Pane>
           <Text color="white" marginTop="5px" align="left" size={500}>
-            React Tech Tips is a youtuber that reviews the most up to date tech
+            Marques Brownlee is a youtuber that reviews the most up to date tech
             gadgets. React has about 100 M subscribers on his channel.
           </Text>
         </Pane>

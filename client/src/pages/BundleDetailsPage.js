@@ -47,10 +47,12 @@ export class BundleDetailsPage extends Component {
         title={p.name}
         selected={this.state.selected[0] === p.id}
         onClick={() => {
-          const newSelected = this.state.selected.map((s, i) => {
-            return i === 0 ? p.id : s;
-          });
-          this.props.toggleSelected(newSelected);
+          this.setState(state => ({
+            selected: state.selected.map((s, i) => {
+              return i === 0 ? p.id : s;
+            })
+          }));
+          this.gotoRefs[1].scrollIntoView({ behavior: "smooth" });
         }}
         ratings={p.ratings}
         editorNote={p.editorNote}
