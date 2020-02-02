@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Pane, Text, TextInput, SearchInput, Card } from "evergreen-ui";
 import logo from "../bb-logo.png";
+import ProductDetailsCard from "../components/ProductDetailsCard";
 
 export class HomePage extends Component {
   render() {
@@ -46,78 +47,13 @@ export class HomePage extends Component {
             flexDirection="row"
             justifyContent="space-around"
           >
-            <Card padding="10px" elevation="3" width="20%" height="250px">
-              ajsjkdfj
-            </Card>
-            <Card padding="10px" elevation="3" width="20%" height="250px">
-              ajsjkdfj
-            </Card>
-            <Card padding="10px" elevation="3" width="20%" height="250px">
-              ajsjkdfj
-            </Card>
-            <Card padding="10px" elevation="3" width="20%" height="250px">
-              ajsjkdfj
-            </Card>            
+            <ProductDetailsCard onClick={() => window.open("http://localhost:3000/bundles/1234")} summary="React Tech Tips" ratings={3} price={123}/>
+            <ProductDetailsCard summary="Christmas Bundle" ratings={3} price={599}/>
+            <ProductDetailsCard summary="Linus Tech Tips" ratings={3} price={259}/>
           </Pane>
         </Pane>
+        
 
-
-        <Pane
-          paddingX="10px"
-          width="100%"
-          display="flex"
-          flexDirection="column"
-          paddingX="10px"
-          paddingY="40px"
-        >
-          <Pane
-            display="flex"
-            flexDirection="row"
-            justifyContent="space-around"
-          >
-            <Card padding="10px" elevation="3" width="20%" height="250px">
-              ajsjkdfj
-            </Card>
-            <Card padding="10px" elevation="3" width="20%" height="250px">
-              ajsjkdfj
-            </Card>
-            <Card padding="10px" elevation="3" width="20%" height="250px">
-              ajsjkdfj
-            </Card>
-            <Card padding="10px" elevation="3" width="20%" height="250px">
-              ajsjkdfj
-            </Card>            
-          </Pane>
-        </Pane>
-
-
-        <Pane
-          paddingX="10px"
-          width="100%"
-          display="flex"
-          flexDirection="column"
-          paddingX="10px"
-          paddingY="40px"
-        >
-          <Pane
-            display="flex"
-            flexDirection="row"
-            justifyContent="space-around"
-          >
-            <Card padding="10px" elevation="3" width="20%" height="250px">
-              ajsjkdfj
-            </Card>
-            <Card padding="10px" elevation="3" width="20%" height="250px">
-              ajsjkdfj
-            </Card>
-            <Card padding="10px" elevation="3" width="20%" height="250px">
-              ajsjkdfj
-            </Card>
-            <Card padding="10px" elevation="3" width="20%" height="250px">
-              ajsjkdfj
-            </Card>            
-          </Pane>
-        </Pane>
 
       </Pane>
     );

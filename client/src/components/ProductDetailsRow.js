@@ -5,7 +5,7 @@ import Headline from "../pages/Headline";
 export class ProductDetailsRow extends PureComponent {
   render() {
     return (
-      <React.Fragment>
+      <div ref={this.props.innerRef}>
         <Headline title={this.props.title} />
         <Pane
           display="flex"
@@ -15,7 +15,7 @@ export class ProductDetailsRow extends PureComponent {
         >
           {this.props.children}
         </Pane>
-      </React.Fragment>
+      </div>
     );
   }
 }

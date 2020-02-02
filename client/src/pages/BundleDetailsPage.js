@@ -16,6 +16,7 @@ import ProductDetailsRow from "../components/ProductDetailsRow";
 import BBButton from "../components/BBButton";
 import Divider from "../Divider";
 import PriceList from "../components/PriceList";
+import assert from "assert";
 
 export class BundleDetailsPage extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export class BundleDetailsPage extends Component {
     this.gotoRefs = [];
 
     this.state = {
-      selected: ["0", "1", "2"],
+      selected: ["-1", "-1", "-1"],
       category1: [],
       category2: [],
       category3: []
@@ -44,13 +45,14 @@ export class BundleDetailsPage extends Component {
       <ProductDetailsCard
         title={p.name}
         selected={this.state.selected[0] === p.id}
-        onClick={() =>
+        onClick={() => {
           this.setState(state => ({
             selected: state.selected.map((s, i) => {
               return i === 0 ? p.id : s;
             })
-          }))
-        }
+          }));
+          this.gotoRefs[1].scrollIntoView({ behavior: "smooth" });
+        }}
         ratings={p.ratings}
         editorNote={p.editorNote}
         noOfReviews={p.reviewCount}
@@ -62,13 +64,14 @@ export class BundleDetailsPage extends Component {
     const category2 = this.state.category2.map((p, index) => (
       <ProductDetailsCard
         selected={this.state.selected[1] === p.id}
-        onClick={() =>
+        onClick={() => {
           this.setState(state => ({
             selected: state.selected.map((s, i) => {
               return i === 1 ? p.id : s;
             })
-          }))
-        }
+          }));
+          this.gotoRefs[2].scrollIntoView({ behavior: "smooth" });
+        }}
         title={p.name}
         ratings={p.ratings}
         editorNote={p.editorNote}
@@ -87,7 +90,6 @@ export class BundleDetailsPage extends Component {
               return i === 2 ? p.id : s;
             })
           }));
-          this.gotoRefs[index + 1].scrollIntoView();
         }}
         title={p.name}
         ratings={p.ratings}
@@ -113,20 +115,20 @@ export class BundleDetailsPage extends Component {
         >
           <ProductDetailsRow
             title="Step 1 - Pick Your Monitor"
-            ref={ref => (this.gotoRefs[0] = ref)}
+            innerRef={ref => (this.gotoRefs[0] = ref)}
           >
             {category1}
           </ProductDetailsRow>
 
           <ProductDetailsRow
             title="Step 2 - Pick Your Keyboard"
-            ref={ref => (this.gotoRefs[1] = ref)}
+            innerRef={ref => (this.gotoRefs[1] = ref)}
           >
             {category2}
           </ProductDetailsRow>
           <ProductDetailsRow
             title="Step 3 - Pick Your Mouse"
-            ref={ref => (this.gotoRefs[2] = ref)}
+            innerRef={ref => (this.gotoRefs[2] = ref)}
           >
             {category3}
           </ProductDetailsRow>
@@ -139,7 +141,17 @@ export class BundleDetailsPage extends Component {
           paddingY="20px"
           paddingX="50px"
         >
-          <PriceList />
+          {this.state.selected.map((id, i) => {
+            if (id < 0) {
+              return null;
+            }
+            const selectedItem = this.state["category" + (i + 1)][id];
+            assert(selectedItem !== null);
+
+            return (
+              <PriceList price={selectedItem.price} name={selectedItem.name} />
+            );
+          })}
         </Pane>
         <Pane
           display="flex"
@@ -151,7 +163,16 @@ export class BundleDetailsPage extends Component {
         >
           <Divider />
           <Heading marginTop="50px" size="700">
-            Total: $123090
+            Total: $
+            {(this.state.selected.map((id, i) => {
+              if (id < 0) {
+                return 0;
+              }
+              const selectedItem = this.state["category" + (i + 1)][id];
+              assert(selectedItem !== null);
+
+              return selectedItem.price;
+            })).reduce((a, b) => a + b, 0)}
           </Heading>
           <BBButton />
         </Pane>

@@ -7,8 +7,9 @@ export const product0 = {
   reviewCount: 76,
   url: "/pics/monitor0.png",
   description: "",
-  price: "$249.00",
-  productID: ""
+  price: 249.00,
+  productID: "",
+  summary: "Best all rounder"
 };
 
 export const product1 = {
@@ -20,7 +21,7 @@ export const product1 = {
   reviewCount: 76,
   url: "/pics/monitor1.png",
   description: "",
-  price: "$249.00",
+  price: 249.00,
   productID: "",
   summary: "Best deal your your buck"
 };
@@ -34,7 +35,7 @@ export const product2 = {
   reviewCount: 76,
   url: "/pics/monitor2.png",
   description: "",
-  price: "$150.00",
+  price: 150.00,
   productID: "",
   summary: "Cheap yet versatile alternative"
 };
@@ -47,7 +48,7 @@ export const product3 = {
   reviewCount: 76,
   url: "/pics/monitor3.png",
   description: "",
-  price: "$600.00",
+  price: 600.00,
   productID: "",
   summary: "Best in-class display, higher latency though"
 };
@@ -60,7 +61,7 @@ export const product4 = {
   reviewCount: 76,
   url: "/pics/monitor4.png",
   description: "",
-  price: "$189.00",
+  price: 189.00,
   productID: "",
   summary: "High FPS rate with brilliant screen"
 };
@@ -74,7 +75,7 @@ export const product5 = {
   reviewCount: 76,
   url: "/pics/monitor5.png",
   description: "",
-  price: "$800.00",
+  price: 800.00,
   productID: "",
   summary: ""
 };
@@ -87,7 +88,7 @@ export const product6 = {
   reviewCount: 76,
   url: "/pics/monitor6.png",
   description: "",
-  price: "$249.00",
+  price: 249.00,
   productID: "",
   summary: ""
 };

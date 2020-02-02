@@ -1,4 +1,5 @@
 export const product1 = {
+  id: "0",
   name: `Razer Ouroboros`,
   ratings: 4,
   editorNote:
@@ -6,12 +7,13 @@ export const product1 = {
   reviewCount: 76,
   url: "/pics/mouse1.png",
   description: "",
-  price: "$149.00",
+  price: 149.00,
   productID: "",
   summary: "Solid choice for basic gaming"
 };
 
 export const product2 = {
+  id: "1",
   name: `Logitech MX Master Bluetooth Laser Mouse - Black`,
   ratings: 5,
   editorNote:
@@ -19,11 +21,12 @@ export const product2 = {
   reviewCount: 76,
   url: "/pics/mouse2.png",
   description: "",
-  price: "$119.00",
+  price: 119.00,
   productID: "",
   summary: "Versatile mouse with lots of functionality"
 };
 export const product3 = {
+  id: "2",
   name: `Logitech G903 12000DPI Wireless Optical Gaming Mouse - Black`,
   ratings: 3,
   editorNote:
@@ -31,7 +34,7 @@ export const product3 = {
   reviewCount: 76,
   url: "/pics/mouse3.png",
   description: "",
-  price: "$59.00",
+  price: 59.00,
   productID: "",
   summary: "Medium build quality, but best value for money"
 };

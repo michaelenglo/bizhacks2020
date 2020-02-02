@@ -37,7 +37,7 @@ export class ProductDetailsCard extends PureComponent {
           <Pane minHeight="35px"> </Pane>
         )}
         <Heading marginTop="10px" align="left" marginBottom="20px">
-          {this.props.summary}
+          "{this.props.summary}"
         </Heading>
         <Text>{this.props.title}</Text>
         <StarRatings
@@ -50,7 +50,7 @@ export class ProductDetailsCard extends PureComponent {
           marginBottom="5px"
           size="600"
         >
-          {this.props.price}
+          ${this.props.price}.00
         </Heading>
         <Heading marginTop="20px" marginBottom="5px" size="100">
           Editors Note:{" "}

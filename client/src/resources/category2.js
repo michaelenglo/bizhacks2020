@@ -7,8 +7,9 @@ export const product0 = {
   reviewCount: 76,
   url: "/pics/keyboard6.png",
   description: "",
-  price: "$249.00",
-  productID: ""
+  price: 249.0,
+  productID: "",
+  summary: "Best all rounder"
 };
 
 export const product1 = {
@@ -20,9 +21,9 @@ export const product1 = {
   reviewCount: 76,
   url: "/pics/keyboard1.png",
   description: "",
-  price: "$249.00",
+  price: 249.0,
   productID: "",
-  summary: ""
+  summary: "Best high end mouse"
 };
 
 export const product2 = {
@@ -34,9 +35,9 @@ export const product2 = {
   reviewCount: 76,
   url: "/pics/keyboard2.png",
   description: "",
-  price: "$249.00",
+  price: 249.0,
   productID: "",
-  summary: ""
+  summary: "Best for FPS"
 };
 export const product3 = {
   id: "3",
@@ -47,9 +48,9 @@ export const product3 = {
   reviewCount: 76,
   url: "/pics/keyboard3.png",
   description: "",
-  price: "$249.00",
+  price: 249.0,
   productID: "",
-  summary: ""
+  summary: "Best for portability"
 };
 export const product4 = {
   id: "4",
@@ -60,9 +61,9 @@ export const product4 = {
   reviewCount: 76,
   url: "/pics/keyboard4.png",
   description: "",
-  price: "$249.00",
+  price: 249.0,
   productID: "",
-  summary: ""
+  summary: "Best for endurance"
 };
 
 export const product5 = {
@@ -74,9 +75,9 @@ export const product5 = {
   reviewCount: 76,
   url: "/pics/keyboard5.png",
   description: "",
-  price: "$249.00",
+  price: 249.0,
   productID: "",
-  summary: ""
+  summary: "Colorful!"
 };
 export const product6 = {
   id: "6",
@@ -87,9 +88,9 @@ export const product6 = {
   reviewCount: 76,
   url: "/pics/keyboard6.png",
   description: "",
-  price: "$249.00",
+  price: 249.0,
   productID: "",
-  summary: ""
+  summary: "My favorite"
 };
 
 export const category2 = [

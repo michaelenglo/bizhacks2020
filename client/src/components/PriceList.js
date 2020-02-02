@@ -6,14 +6,14 @@ export class PriceList extends PureComponent {
     return (
       <Pane
         display="flex"
-        paddingLeft="50%"
+        paddingLeft="20%"
         marginTop="10px"
         width="100%"
         justifyContent="space-between"
         flexDirection="row"
       >
-        <Heading>1 x Item</Heading>
-        <Heading>$10.00</Heading>
+  <Heading>1 x {this.props.name}</Heading>
+    <Heading>${this.props.price}</Heading>
       </Pane>
     );
   }
