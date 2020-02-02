@@ -30,31 +30,40 @@ export class BundleDetailsPage extends Component {
     const category1 = this.state.category1.map((p, index) => (
       <ProductDetailsCard
         title={p.name}
+        key={p.name}
         selected={this.state.selected[0] === `${index}`}
         ratings={p.ratings}
         editorNote={p.editorNote}
         noOfReviews={p.reviewCount}
         url={p.url}
+        price={p.price}
+        summary={p.summary}
       />
     ));
     const category2 = this.state.category2.map((p, index) => (
       <ProductDetailsCard
         title={p.name}
-        selected={this.state.selected[0] === `${index}`}
+        key={p.name}
+        selected={this.state.selected[1] === `${index}`}
         ratings={p.ratings}
         editorNote={p.editorNote}
         noOfReviews={p.reviewCount}
         url={p.url}
+        price={p.price}
+        summary={p.summary}
       />
     ));
     const category3 = this.state.category3.map((p, index) => (
       <ProductDetailsCard
         title={p.name}
-        selected={this.state.selected[0] === `${index}`}
+        key={p.name}
+        selected={this.state.selected[2] === `${index}`}
         ratings={p.ratings}
         editorNote={p.editorNote}
         noOfReviews={p.reviewCount}
         url={p.url}
+        price={p.price}
+        summary={p.summary}
       />
     ));
 
