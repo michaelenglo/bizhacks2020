@@ -34,6 +34,7 @@ export class BundleDetailsPage extends Component {
 
   componentDidMount() {
     this.setState({
+      selected: this.props.selected,
       category1: this.props.category1,
       category2: this.props.category2,
       category3: this.props.category3
@@ -46,12 +47,10 @@ export class BundleDetailsPage extends Component {
         title={p.name}
         selected={this.state.selected[0] === p.id}
         onClick={() => {
-          this.setState(state => ({
-            selected: state.selected.map((s, i) => {
-              return i === 0 ? p.id : s;
-            })
-          }));
-          this.gotoRefs[1].scrollIntoView({ behavior: "smooth" });
+          const newSelected = this.state.selected.map((s, i) => {
+            return i === 0 ? p.id : s;
+          });
+          this.props.toggleSelected(newSelected);
         }}
         ratings={p.ratings}
         editorNote={p.editorNote}
@@ -174,7 +173,9 @@ export class BundleDetailsPage extends Component {
               return selectedItem.price;
             })).reduce((a, b) => a + b, 0)}
           </Heading>
-          <BBButton />
+          <a href={"/cart"}>
+            <BBButton />
+          </a>
         </Pane>
       </Pane>
     );
