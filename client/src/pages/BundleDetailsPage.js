@@ -21,8 +21,10 @@ export class BundleDetailsPage extends Component {
   constructor(props) {
     super(props);
 
+    this.gotoRefs = [];
+
     this.state = {
-      selected: ["0", "1", "4"],
+      selected: ["-1", "-1", "-1"],
       category1: [],
       category2: [],
       category3: []
@@ -53,6 +55,8 @@ export class BundleDetailsPage extends Component {
         editorNote={p.editorNote}
         noOfReviews={p.reviewCount}
         url={p.url}
+        price={p.price}
+        summary={p.summary}
       />
     ));
     const category2 = this.state.category2.map((p, index) => (
@@ -70,23 +74,28 @@ export class BundleDetailsPage extends Component {
         editorNote={p.editorNote}
         noOfReviews={p.reviewCount}
         url={p.url}
+        price={p.price}
+        summary={p.summary}
       />
     ));
     const category3 = this.state.category3.map((p, index) => (
       <ProductDetailsCard
         selected={this.state.selected[2] === p.id}
-        onClick={() =>
+        onClick={() => {
           this.setState(state => ({
             selected: state.selected.map((s, i) => {
               return i === 2 ? p.id : s;
             })
-          }))
-        }
+          }));
+          this.gotoRefs[index + 1].scrollIntoView();
+        }}
         title={p.name}
         ratings={p.ratings}
         editorNote={p.editorNote}
         noOfReviews={p.reviewCount}
         url={p.url}
+        price={p.price}
+        summary={p.summary}
       />
     ));
 
@@ -102,14 +111,23 @@ export class BundleDetailsPage extends Component {
           paddingY="20px"
           paddingX="50px"
         >
-          <ProductDetailsRow title="Step 1 - Pick Your Monitor">
+          <ProductDetailsRow
+            title="Step 1 - Pick Your Monitor"
+            ref={ref => (this.gotoRefs[0] = ref)}
+          >
             {category1}
           </ProductDetailsRow>
 
-          <ProductDetailsRow title="Step 2 - Pick Your Keyboard">
+          <ProductDetailsRow
+            title="Step 2 - Pick Your Keyboard"
+            ref={ref => (this.gotoRefs[1] = ref)}
+          >
             {category2}
           </ProductDetailsRow>
-          <ProductDetailsRow title="Step 2 - Pick Your Mouse">
+          <ProductDetailsRow
+            title="Step 2 - Pick Your Mouse"
+            ref={ref => (this.gotoRefs[2] = ref)}
+          >
             {category3}
           </ProductDetailsRow>
         </Pane>

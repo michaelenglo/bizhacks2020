@@ -24,30 +24,38 @@ export class ProductDetailsCard extends PureComponent {
           backgroundSize="contain"
           backgroundRepeat="no-repeat"
         ></Pane>
-        {this.props.selected ? <Heading color="green" marginTop="10px" align="right" marginBottom="20px">
-          SELECTED
-        </Heading> : <Pane minHeight="35px"> </Pane>}
+        {this.props.selected ? (
+          <Heading
+            color="green"
+            marginTop="10px"
+            align="right"
+            marginBottom="20px"
+          >
+            SELECTED
+          </Heading>
+        ) : (
+          <Pane minHeight="35px"> </Pane>
+        )}
         <Heading marginTop="10px" align="left" marginBottom="20px">
-          "{this.props.editorNote}"
+          {this.props.summary}
         </Heading>
-        <Text>
-          Samsung 32" 60Hz 4ms Curved PLS LED Monitor (LC32F391FWNXZA) - White
-        </Text>
+        <Text>{this.props.title}</Text>
         <StarRatings
           ratings={this.props.ratings}
           reviews={this.props.noOfReviews}
         />
-        <Heading fontWeight="700" marginTop="20px" marginBottom="5px" size="600">
-            $249.00
+        <Heading
+          fontWeight="700"
+          marginTop="20px"
+          marginBottom="5px"
+          size="600"
+        >
+          {this.props.price}
         </Heading>
         <Heading marginTop="20px" marginBottom="5px" size="100">
           Editors Note:{" "}
         </Heading>
-        <Text marginTop="10px">
-          This item is a really good item for people who are looking into a more
-          budget friendly monitors. It's got 28.6 GHz of RMP and dual processing
-          quickdown.
-        </Text>
+        <Text marginTop="10px">{this.props.editorNote}</Text>
       </Pane>
     );
   }

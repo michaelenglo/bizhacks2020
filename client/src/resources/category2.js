@@ -21,7 +21,8 @@ export const product1 = {
   url: "/pics/keyboard1.png",
   description: "",
   price: "$249.00",
-  productID: ""
+  productID: "",
+  summary: ""
 };
 
 export const product2 = {
@@ -34,7 +35,8 @@ export const product2 = {
   url: "/pics/keyboard2.png",
   description: "",
   price: "$249.00",
-  productID: ""
+  productID: "",
+  summary: ""
 };
 export const product3 = {
   id: "3",
@@ -46,7 +48,8 @@ export const product3 = {
   url: "/pics/keyboard3.png",
   description: "",
   price: "$249.00",
-  productID: ""
+  productID: "",
+  summary: ""
 };
 export const product4 = {
   id: "4",
@@ -58,7 +61,8 @@ export const product4 = {
   url: "/pics/keyboard4.png",
   description: "",
   price: "$249.00",
-  productID: ""
+  productID: "",
+  summary: ""
 };
 
 export const product5 = {
@@ -71,7 +75,8 @@ export const product5 = {
   url: "/pics/keyboard5.png",
   description: "",
   price: "$249.00",
-  productID: ""
+  productID: "",
+  summary: ""
 };
 export const product6 = {
   id: "6",
@@ -83,7 +88,8 @@ export const product6 = {
   url: "/pics/keyboard6.png",
   description: "",
   price: "$249.00",
-  productID: ""
+  productID: "",
+  summary: ""
 };
 
 export const category2 = [
