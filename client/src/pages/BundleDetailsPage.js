@@ -25,7 +25,6 @@ export class BundleDetailsPage extends Component {
     this.gotoRefs = [];
 
     this.state = {
-      selected: ["-1", "-1", "-1"],
       category1: [],
       category2: [],
       category3: []
@@ -34,20 +33,32 @@ export class BundleDetailsPage extends Component {
 
   componentDidMount() {
     this.setState({
-      selected: this.props.selected,
       category1: this.props.category1,
       category2: this.props.category2,
       category3: this.props.category3
     });
   }
 
+  componentDidUpdate() {
+    console.log(this.props.selected);
+    // if (
+    //   this.props.selected[0] !== this.props.selected[0] ||
+    //   this.props.selected[1] !== this.props.selected[1] ||
+    //   this.props.selected[2] !== this.props.selected[2]
+    // ) {
+    //   console.log("updated");
+    //   this.setState({
+    //     selected: this.props.selected
+    //   });
+    // }
+  }
   render() {
     const category1 = this.state.category1.map((p, index) => (
       <ProductDetailsCard
         title={p.name}
-        selected={this.state.selected[0] === p.id}
+        selected={this.props.selected[0] === p.id}
         onClick={() => {
-          const newSelected = this.state.selected.map((s, i) => {
+          const newSelected = this.props.selected.map((s, i) => {
             return i === 0 ? p.id : s;
           });
           this.props.toggleSelected(newSelected);
@@ -62,13 +73,12 @@ export class BundleDetailsPage extends Component {
     ));
     const category2 = this.state.category2.map((p, index) => (
       <ProductDetailsCard
-        selected={this.state.selected[1] === p.id}
+        selected={this.props.selected[1] === p.id}
         onClick={() => {
-          this.setState(state => ({
-            selected: state.selected.map((s, i) => {
-              return i === 1 ? p.id : s;
-            })
-          }));
+          const newSelected = this.props.selected.map((s, i) => {
+            return i === 1 ? p.id : s;
+          });
+          this.props.toggleSelected(newSelected);
           this.gotoRefs[2].scrollIntoView({ behavior: "smooth" });
         }}
         title={p.name}
@@ -82,13 +92,12 @@ export class BundleDetailsPage extends Component {
     ));
     const category3 = this.state.category3.map((p, index) => (
       <ProductDetailsCard
-        selected={this.state.selected[2] === p.id}
+        selected={this.props.selected[2] === p.id}
         onClick={() => {
-          this.setState(state => ({
-            selected: state.selected.map((s, i) => {
-              return i === 2 ? p.id : s;
-            })
-          }));
+          const newSelected = this.props.selected.map((s, i) => {
+            return i === 2 ? p.id : s;
+          });
+          this.props.toggleSelected(newSelected);
         }}
         title={p.name}
         ratings={p.ratings}
@@ -132,7 +141,6 @@ export class BundleDetailsPage extends Component {
             {category3}
           </ProductDetailsRow>
         </Pane>
-
         <Pane
           display="flex"
           flexDirection="column"
@@ -140,7 +148,7 @@ export class BundleDetailsPage extends Component {
           paddingY="20px"
           paddingX="50px"
         >
-          {this.state.selected.map((id, i) => {
+          {this.props.selected.map((id, i) => {
             if (id < 0) {
               return null;
             }
@@ -163,15 +171,17 @@ export class BundleDetailsPage extends Component {
           <Divider />
           <Heading marginTop="50px" size="700">
             Total: $
-            {(this.state.selected.map((id, i) => {
-              if (id < 0) {
-                return 0;
-              }
-              const selectedItem = this.state["category" + (i + 1)][id];
-              assert(selectedItem !== null);
+            {this.props.selected
+              .map((id, i) => {
+                if (id < 0) {
+                  return 0;
+                }
+                const selectedItem = this.state["category" + (i + 1)][id];
+                assert(selectedItem !== null);
 
-              return selectedItem.price;
-            })).reduce((a, b) => a + b, 0)}
+                return selectedItem.price;
+              })
+              .reduce((a, b) => a + b, 0)}
           </Heading>
           <a href={"/cart"}>
             <BBButton />
