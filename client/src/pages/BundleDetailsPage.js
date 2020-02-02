@@ -24,7 +24,7 @@ export class BundleDetailsPage extends Component {
     this.gotoRefs = [];
 
     this.state = {
-      selected: ["-1", "-1", "-1"],
+      selected: ["0", "1", "2"],
       category1: [],
       category2: [],
       category3: []
@@ -125,7 +125,7 @@ export class BundleDetailsPage extends Component {
             {category2}
           </ProductDetailsRow>
           <ProductDetailsRow
-            title="Step 2 - Pick Your Mouse"
+            title="Step 3 - Pick Your Mouse"
             ref={ref => (this.gotoRefs[2] = ref)}
           >
             {category3}

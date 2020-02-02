@@ -12,7 +12,7 @@ export class PriceList extends PureComponent {
         justifyContent="space-between"
         flexDirection="row"
       >
-        <Heading>1 x ITEem</Heading>
+        <Heading>1 x Item</Heading>
         <Heading>$10.00</Heading>
       </Pane>
     );

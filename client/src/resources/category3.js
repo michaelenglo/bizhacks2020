@@ -1,83 +1,39 @@
 export const product1 = {
-  name: `Samsung 32" 60Hz 4ms Curved PLS LED Monitor (LC32F391FWNXZA) - White`,
-  ratings: 3,
+  name: `Razer Ouroboros`,
+  ratings: 4,
   editorNote:
     "This item is a really good item for people who are looking into a more budget friendly monitors. It's got 28.6 GHz of RMP and dual processing quickdown.",
   reviewCount: 76,
-  url: "/pics/monitor1.png",
+  url: "/pics/mouse1.png",
   description: "",
-  price: "$249.00",
+  price: "$149.00",
   productID: "",
-  summary: "'"
+  summary: "Solid choice for basic gaming"
 };
 
 export const product2 = {
-  name: `Samsung 32" 60Hz 4ms Curved PLS LED Monitor (LC32F391FWNXZA) - White`,
-  ratings: 3,
+  name: `Logitech MX Master Bluetooth Laser Mouse - Black`,
+  ratings: 5,
   editorNote:
     "This item is a really good item for people who are looking into a more budget friendly monitors. It's got 28.6 GHz of RMP and dual processing quickdown.",
   reviewCount: 76,
-  url: "/pics/monitor2.png",
+  url: "/pics/mouse2.png",
   description: "",
-  price: "$249.00",
+  price: "$119.00",
   productID: "",
-  summary: "'"
+  summary: "Versatile mouse with lots of functionality"
 };
 export const product3 = {
-  name: `Samsung 32" 60Hz 4ms Curved PLS LED Monitor (LC32F391FWNXZA) - White`,
+  name: `Logitech G903 12000DPI Wireless Optical Gaming Mouse - Black`,
   ratings: 3,
   editorNote:
     "This item is a really good item for people who are looking into a more budget friendly monitors. It's got 28.6 GHz of RMP and dual processing quickdown.",
   reviewCount: 76,
-  url: "/pics/monitor3.png",
+  url: "/pics/mouse3.png",
   description: "",
-  price: "$249.00",
+  price: "$59.00",
   productID: "",
-  summary: "'"
-};
-export const product4 = {
-  name: `Samsung 32" 60Hz 4ms Curved PLS LED Monitor (LC32F391FWNXZA) - White`,
-  ratings: 3,
-  editorNote:
-    "This item is a really good item for people who are looking into a more budget friendly monitors. It's got 28.6 GHz of RMP and dual processing quickdown.",
-  reviewCount: 76,
-  url: "/pics/monitor4.png",
-  description: "",
-  price: "$249.00",
-  productID: "",
-  summary: "'"
+  summary: "Medium build quality, but best value for money"
 };
 
-export const product5 = {
-  name: `Samsung 32" 60Hz 4ms Curved PLS LED Monitor (LC32F391FWNXZA) - White`,
-  ratings: 3,
-  editorNote:
-    "This item is a really good item for people who are looking into a more budget friendly monitors. It's got 28.6 GHz of RMP and dual processing quickdown.",
-  reviewCount: 76,
-  url: "/pics/monitor5.png",
-  description: "",
-  price: "$249.00",
-  productID: "",
-  summary: "'"
-};
-export const product6 = {
-  name: `Samsung 32" 60Hz 4ms Curved PLS LED Monitor (LC32F391FWNXZA) - White`,
-  ratings: 3,
-  editorNote:
-    "This item is a really good item for people who are looking into a more budget friendly monitors. It's got 28.6 GHz of RMP and dual processing quickdown.",
-  reviewCount: 76,
-  url: "/pics/monitor6.png",
-  description: "",
-  price: "$249.00",
-  productID: "",
-  summary: "'"
-};
-
-export const category3 = [
-  product1,
-  product2,
-  product3,
-  product4,
-  product5,
-  product6
-];
+export const category3 = [product1, product2, product3];
