@@ -22,7 +22,7 @@ export class HomePage extends Component {
           <Pane>
             <img src={logo} width="200px" className="App-logo" alt="logo" />
             <Text color="white" marginLeft="10px">
-              BUNDLES
+              AFFILIATES
             </Text>
           </Pane>
           <Pane marginTop="100px" width="80%">
